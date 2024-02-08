@@ -16,11 +16,13 @@ sudo make install
 You will also need to add this to your `.bashrc` or equivalent:
 
 ```{bash}
-HERE=$([ -f "$HOME/.here" ] && cat "$HOME/.here")
-if ! [ -z "$HERE" ]; then
-	cd "$HERE"
-fi
+HERE=$HOME/.here
+[ -s $HERE ] && cd $(cat $HERE)
 ```
 
+You may also like to know when you have `here` activated in your shell. In bash, you can add something like this to your `PS1`, which will add a folder icon to your prompt:
 
+```{bash}
+\$([ -s $HERE ] && printf '\Uf413  ')
+```
 
