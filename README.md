@@ -8,7 +8,6 @@ If you're like me, a hard-livin' type who does most of his work in the terminal,
 
 Once you clone the repository, install using these commands.
 ```
-git clone 
 cd here
 make
 sudo make install
