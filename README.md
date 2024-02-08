@@ -13,16 +13,19 @@ make
 sudo make install
 ```
 
-You will also need to add this to your `.bashrc` or equivalent:
+You will also need to add this to your `.bashrc` or equivalent.
 
 ```{bash}
 HERE=$HOME/.here
 [ -s $HERE ] && cd $(cat $HERE)
 ```
 
-You may also like to know when you have `here` activated in your shell. In bash, you can add something like this to your `PS1`, which will add a folder icon to your prompt:
+You may also like to know when you have `here` activated in your shell. In bash, you can write a function like the following, and call it in your `PS1` to add a cute folder icon to your prompt.
 
 ```{bash}
-\$([ -s $HERE ] && printf '\Uf413  ')
+function here_flag {
+	[ -s $HERE ] && printf '\Uf413  '
+}
 ```
 
+Honestly, it's so simple, it feels stupid. You probably could have done this yourself. Enjoy!
