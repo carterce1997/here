@@ -1,5 +1,0 @@
-#!/bin/sh
-
-pwd > $HOME/.here
-exit 0
-#EOF
