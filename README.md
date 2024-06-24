@@ -17,7 +17,7 @@ You will also need to add this to your `.bashrc` or equivalent.
 
 ```{bash}
 HERE=$HOME/.here
-[ -s $HERE ] && cd $(cat $HERE)
+[ -s $HERE ] && cd $(cat $HERE) || true
 ```
 
 You may also like to know when you have `here` activated in your shell. In bash, you can write a function like the following, and call it in your `PS1` to add a cute folder icon to your prompt.
